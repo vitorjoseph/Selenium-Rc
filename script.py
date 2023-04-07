@@ -39,7 +39,8 @@ listaLivros = []
 for i in range(5):
 
     time.sleep(5)
-    # Númerp de livros encontrados
+    
+    # Número de livros encontrados
     listaDeLivros = navegador.find_elements(By.CLASS_NAME, 'result-list-li')
     num_livros += len(listaDeLivros)
 
@@ -56,8 +57,7 @@ for i in range(5):
     if i < 4:
 
         time.sleep(2)
-        proximaPagina = navegador.find_element(
-            By.XPATH, '//*[@id="ctl00_ctl00_MainContentArea_MainContentArea_bottomMultiPage_lnkNext"]')
+        proximaPagina = navegador.find_element(By.XPATH, '//*[@id="ctl00_ctl00_MainContentArea_MainContentArea_bottomMultiPage_lnkNext"]')
         proximaPagina.click()
         
     else:
@@ -87,7 +87,7 @@ options = {
 }
 
 # Salvar como PDF
-config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+config = pdfkit.configuration(wkhtmltopdf=r'wkhtmltopdf\bin\wkhtmltopdf.exe')
 pdfkit.from_string(html, 'lista_livros.pdf', configuration=config, options=options)
 
 # Finaliza o navegador
