@@ -4,7 +4,7 @@
 
 Utilizando o Selenium RC (Remote Control) estruture os seus testes conforme especificado:
 
-1. Acesse a p ́agina da Biblioteca PUC Minas;
+1. Acesse a página da Biblioteca PUC Minas;
 
 2. Pesquise por Livros de Teste de Software;
 
